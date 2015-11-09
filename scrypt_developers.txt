@@ -1,0 +1,65 @@
+insert into Developers     
+values ( '1','1', 'Valve', '1996');
+commit;
+insert into Developers     
+values ( '2','2', 'Blizzard Entertainment', '1994');
+commit;
+insert into Developers     
+values ( '3','2', 'Infinity Ward', '2002');
+commit;
+insert into Developers
+values ( '4','2 ', 'Treyarch, Inc', '1996');
+commit;
+insert into Developers     
+values ( '5','3', 'Capcom', '1996');
+commit;
+insert into Developers     
+values ( '6','4', 'Criterion Games', '1993');
+commit;
+insert into Developers
+values ( '7','4', 'Visceral Games', '1998');
+commit;
+insert into Developers
+values ( '8','4', 'Digital Illusions', '1992');
+commit;
+insert into Developers
+values ( '9','4', 'BioWare', '1995');
+commit;
+insert into Developers
+values ( '10','4', 'EA Sports', '1982');
+commit;
+insert into Developers     
+values ( '11','5', 'Ubisoft Montreal', '1997');
+commit;
+insert into Developers     
+values ( '12','5', 'Nival Interactive', '1996');
+commit;
+insert into Developers     
+values ( '13','6', 'Naughty Dog', '1989');
+commit;
+insert into Developers
+values ( '14','6', 'Polyphony Digital', '1998');
+commit;
+insert into Developers
+values ( '15','6', 'FROM Software', '1986');
+commit;
+insert into Developers     
+values ( '16','7', 'Riot Games', '2006');
+commit;
+insert into Developers
+values ( '17','8', 'Rockstar North', '2001');
+commit;
+insert into Developers
+values ( '18','8', 'Remedy Entertainment', '1995');
+commit;
+insert into Developers
+values ( '19','8', 'Rockstar Vancouver', '2002');
+commit;
+insert into Developers
+values ( '20','9', 'id SoftWare', '1990');
+commit;
+insert into Developers
+values ( '21','9', 'Bethseda Game Studios', '2001');
+commit;
+
+
