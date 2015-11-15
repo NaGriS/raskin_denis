@@ -1,13 +1,14 @@
-create table Sale(
+create table Sales(
 id int not null primary key,
 game_id int not null references Games,
+sale_year int,
 sales int);
 commit;
-insert into Sale values('1','1','2020024');
-insert into Sale values('2','2','3215232');
-insert into Sale values('3','3','12524312');
-insert into Sale values('4','4','24213245');
-insert into Sale values('5','5','74232335');
-insert into Sale values('6','6','3231312');
-insert into Sale values('7','7','5213212');
+insert into Sales values('1','1','2013','20200');
+insert into Sales values('2','2','2012','25232');
+insert into Sales values('3','2','2013','24312');
+insert into Sales values('4','3','2014','2425');
+insert into Sales values('5','4','2015','7335');
+insert into Sales values('6','5','2014','21312');
+insert into Sales values('7','6','2015','5212');
 commit;
