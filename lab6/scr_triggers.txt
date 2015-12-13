@@ -1,0 +1,42 @@
+set term ^;
+CREATE OR ALTER trigger auto_incr for test
+active before insert
+AS
+begin
+    select max(test.id) from test into new.id;
+    new.id = new.id + 1;
+end^
+
+create or alter exception control_failed ‘Failed control data integrity’^
+CREATE OR ALTER trigger Control for developers
+active before delete or update
+AS
+begin
+    if (OLD.id in (select games.dev_id from games)) then
+        exception control_failed;
+end^
+
+create or alter exception already ’Tournament already has been held’^
+CREATE OR ALTER trigger AlreadyHave for tournaments
+active before insert or update
+AS
+begin
+        IF(NEW.tour_id in (select tour_id from tournaments where tour_year = NEW.tour_year))           
+        then
+        exception already;
+end^
+
+
+create or alter exception toomuch 'Too much games from one developer and one genre'^
+CREATE OR ALTER trigger TooMuchG for tournaments
+active before insert
+AS
+begin
+        IF(EXISTS(select games.dev_id, count(games.dev_id) as games_in_genre
+        from games, tournaments where games.id = tournaments.game_id
+        group by dev_id, genre_id having count(games.dev_id) > 2))
+        then
+        exception toomuch;
+end^
+
+set term ;^
