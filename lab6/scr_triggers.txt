@@ -1,11 +1,5 @@
 set term ^;
-CREATE OR ALTER trigger auto_incr for test
-active before insert
-AS
-begin
-    select max(test.id) from test into new.id;
-    new.id = new.id + 1;
-end^
+--create generator incr^create or alter trigger auto_incr for TEST before insertasbegin new.id = gen_id(incr,1); end^
 
 create or alter exception control_failed ‘Failed control data integrity’^
 CREATE OR ALTER trigger Control for developers
