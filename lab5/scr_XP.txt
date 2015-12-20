@@ -1,0 +1,54 @@
+set term ^;
+CREATE or ALTER PROCEDURE Dev_Eff
+returns(dev_id integer, eff integer)
+AS
+declare asales int;
+declare tmpdev int;
+BEGIN
+asales = 0;
+tmpdev = 0;
+FOR
+        select games.dev_id, sum(S) from games,
+        (select game_id as R, sum(sales) as S from sales group by game_id)
+        where games.id = R group by games.dev_id into :tmpdev, :asales
+do
+        BEGIN
+        dev_id = tmpdev;
+        eff = asales * 0.000001;
+        SUSPEND;
+        END
+END^
+
+CREATE or ALTER PROCEDURE Gamers_Eff(yyear int)
+returns(gamer_id integer, last_year_winned integer, curr_year_winned  integer)
+AS
+BEGIN
+FOR
+	with data as
+	(
+        select gamers.id as g_id, count(tables.id) as cnt_prev_year, 0 as cnt_curr_year
+	from gamers, tables, tournaments
+	where tables.winner = gamers.team_id
+	and tournaments.id = tables.tour_id and tournaments.tour_year = :yyear-1  
+	group by g_id
+
+	union all
+
+        select gamers.id as g_id, 0 as cnt_prev_year, count(tables.id) as cnt_curr_year
+        from gamers, tables, tournaments
+        where tables.winner = gamers.team_id
+        and tournaments.id = tables.tour_id and tournaments.tour_year = :yyear
+	group by g_id
+	)
+	select 
+	g_id as tmp1, sum(cnt_prev_year) as tmp2, sum(cnt_curr_year) as tmp3 from data
+	group by tmp1 
+into :gamer_id, :last_year_winned, :curr_year_winned
+do
+     BEGIN
+     SUSPEND;
+     END
+END^
+
+SET TERM ; ^
+
