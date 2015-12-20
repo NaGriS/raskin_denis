@@ -1,0 +1,12 @@
+create view rating(team_id,prize) 
+as
+select * from finals 
+union distinct 
+select * from seconds
+union distinct 
+select * from thirds
+union distinct 
+select * from finals
+union distinct 
+select * from groups;
+
