@@ -1,0 +1,38 @@
+create table Matches(
+id int not null primary key,
+match_name varchar(35) not null,
+bracket varchar(20));
+commit;
+insert into Matches
+values('1','Group Match','');
+insert into Matches
+values('2','1/8 final','');
+insert into Matches
+values('3','Quater-final','');
+insert into Matches
+values('4','Semi-final','');
+insert into Matches
+values('5','Grand Final','');
+insert into Matches
+values('6','1/16 final','');
+insert into Matches
+values('7','1/8 final','Upper');
+insert into Matches
+values('8','Quater-final','Upper');
+insert into Matches
+values('9','Semi-final','Upper');
+insert into Matches
+values('10','Final','Upper');
+insert into Matches
+values('11','1/16 final','Upper');
+insert into Matches
+values('12','1/8 final','Lower');
+insert into Matches
+values('13','Quater-final','Lower');
+insert into Matches
+values('14','Semi-final','Lower');
+insert into Matches
+values('15','Final','Lower');
+insert into Matches
+values('16','1/16 final','Lower');
+commit;

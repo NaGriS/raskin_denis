@@ -1,0 +1,38 @@
+ocreate table Distributors(
+id int not null primary key,
+name varchar(30) not null,
+create_year int not null);
+commit;
+create table Developers(
+id int not null primary key,
+distr_id int references Distributors,
+name varchar(30) not null,
+create_year int not null);
+commit;
+create table Genre(
+id int not null primary key,
+name varchar(30) not null unique);
+commit;
+create table Games(
+id int not null primary key,
+dev_id int not null references Developers,
+genre_id int not null references Genre,
+name varchar(30) not null,
+create_year int not null);
+commit;
+create table Teams(
+id int not null primary key,
+name varchar(40) not null,
+org varchar(40));
+commit;
+create table Gamers(
+id int not null primary key,
+team_id int references Teams, 
+game_id int references Games,
+name varchar(40) not null);
+commit;
+
+
+
+
+

@@ -1,0 +1,20 @@
+create table TableTournaments(
+id int not null primary key,
+tournament varchar(50) not null);
+create table Tournaments(
+id int not null primary key,
+tour_id int not null references TableTournaments,
+tour_year int not null,
+game_id int not null references Games);
+create table TourInfo(
+id int not null primary key,
+tour_id int not null references TableTournaments,
+prize_pool int not null);
+create table Tables(
+id int not null primary key,
+tour_id int not null references TableTournaments,
+match_name varchar(30) not null,
+team_one int references Teams,
+team_two int references Teams,
+winner int not null  references Teams);
+commit;

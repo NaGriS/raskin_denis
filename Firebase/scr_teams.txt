@@ -1,0 +1,115 @@
+insert into Teams
+values ('1','LGD Gaming','');
+insert into Teams 
+values ('2','Team Empire','');
+insert into Teams 
+values ('3','CDEC Gaming','');
+insert into Teams 
+values ('4','Cloud9','');
+insert into Teams 
+values ('5','Evil Geniuses','');
+insert into Teams 
+values ('6','comLexity','');
+insert into Teams 
+values ('7','Team Secret','');
+insert into Teams 
+values ('8','EHOME','');
+insert into Teams 
+values ('9','MVP Phoenix','');
+insert into Teams 
+values ('10','Newbee','');
+insert into Teams 
+values ('11','Vici Gaming','');
+insert into Teams 
+values ('12','Natus Vincere','');
+insert into Teams 
+values ('13','Virtus.pro','');
+insert into Teams 
+values ('14','Fnatic','');
+insert into Teams 
+values ('15','Invictus Gaming','');
+insert into Teams 
+values ('16','MVP Hot6ix','');
+insert into Teams 
+values ('17','PENTA Sports','');
+insert into Teams 
+values ('18','Keyd Stars','');
+insert into Teams 
+values ('19','Team EnVyUs','');
+insert into Teams 
+values ('20','Ninjas in Pyjamas','');
+insert into Teams 
+values ('21','Team Solo Mid','');
+insert into Teams 
+values ('22','LGD Gaming','');
+insert into Teams 
+values ('23','Counter Logic Gaming','');
+insert into Teams 
+values ('24','H2k-Gaming','');
+insert into Teams 
+values ('25','Origen','');
+insert into Teams 
+values ('26','SK Telecom T1','');
+insert into Teams 
+values ('27','KOO Tigers','');
+insert into Teams 
+values ('28','kt Rolster','');
+insert into Teams 
+values ('29','Edward Gaming','');
+insert into Teams 
+values ('30','ahq e-Sports Club','');
+insert into Teams 
+values ('31','yoe Flash Wolves','');
+insert into Teams 
+values ('32','Bangkok Titans','');
+insert into Teams 
+values ('33','paiN Gaming','');
+insert into Teams 
+values ('34','CJ Entus','');
+insert into Teams 
+values ('35','mYinsanity','');
+insert into Teams 
+values ('36','Millenium','');
+insert into Teams 
+values ('37','Jin Air Green Wings','');
+insert into Teams 
+values ('38','CM Storm','');
+insert into Teams 
+values ('39','Dead Pixels','');
+insert into Teams 
+values ('40','Root Gaming','');
+insert into Teams 
+values ('41','Bravado Gaming','');
+insert into Teams 
+values ('42','Team Dignitas','');
+insert into Teams 
+values ('43','HellRaisers','');
+insert into Teams 
+values ('44','Team Dignitas','');
+insert into Teams 
+values ('45','iBUYPOWER','');
+insert into Teams 
+values ('46','Copenhagen Wolves','');
+insert into Teams 
+values ('47','LDLC','');
+insert into Teams 
+values ('48','ESC Gaming','');
+insert into Teams 
+values ('49','Planetkey Dynamics','');
+insert into Teams 
+values ('50','myXMG','');
+insert into Teams 
+values ('51','Flipsid3','');
+insert into Teams 
+values ('52','LGD Gaming','');
+insert into Teams 
+values ('53','Team Liquid','');
+insert into Teams 
+values ('54','Team Acer','');
+insert into Teams 
+values ('55','mousesports','');
+insert into Teams 
+values ('56','Renegades','');
+insert into Teams 
+values ('57','SK Gaming','');
+commit;

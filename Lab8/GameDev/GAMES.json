@@ -1,7 +1,0 @@
-{
-   "GAMES":[
-       { "ID" : "100093", "DEV_ID" : "2", "GENRE_ID" : "1","NAME" : "Bloodborne","CREATE_YEAR" : "2013" },
-       { "ID" : "100096", "DEV_ID" : "10", "GENRE_ID" : "12","NAME" : "newgame","CREATE_YEAR" : "2012" },
-       { "ID" : "100094", "DEV_ID" : "17", "GENRE_ID" : "12","NAME" : "bestgame","CREATE_YEAR" : "2015" }
-   ]
-}
